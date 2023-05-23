@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+// Pixels to REM
+@function rem($pixels, $context: 16) {
+	@return math.div($pixels, $context) * 1rem;
+}
+
+// Convert line-height in pixels to unitless
+@function get-line-height($font-size, $line-height) {
+	$value: math.div($line-height, $font-size);
+	@return math.div($value, ($value * 0 + 1));
+}

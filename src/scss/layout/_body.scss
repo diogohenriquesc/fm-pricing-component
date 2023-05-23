@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+body {
+  background: $clr-neutral-2;
+  padding-block: rem(64) rem(71);
+
+  @include breakpoint(md) {
+    padding-block: rem(71) rem(103);
+  }
+}

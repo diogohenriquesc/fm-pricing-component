@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+h2 {
+  font-size: rem(32);
+  line-height: get-line-height(rem(32), rem(39.01));
+}
+
+h3 {
+  font-size: rem(18);
+  line-height: get-line-height(rem(18), rem(28));
+}
+
+h4 {
+  font-size: rem(72);
+  line-height: get-line-height(rem(72), rem(71));
+}
+
+body {
+  font-size: rem(15);
+  line-height: get-line-height(rem(15), rem(28));
+  font-family: $ff-montserrat;
+  color: $clr-solid-1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

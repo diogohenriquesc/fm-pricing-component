@@ -33,6 +33,8 @@ function browserSyncServe(cb) {
 		notify: false,
 		scrollRestoreTechnique: 'cookie',
 		online: false,
+		ghostMode: false,
+		open: false,
 	});
 	cb();
 }

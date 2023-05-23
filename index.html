@@ -16,9 +16,18 @@
     <section class="component">
       <div class="component__header">
         <h2 class="component__title">Our Pricing</h2>
-        <fieldset class="compoennt__controls">
-          <label for="">Annualy</label>
-          <label for="">Monthly</label>
+        <fieldset class="component__controls" aria-label="pricing switcher" role="radiogroup">
+          <div class="pricing-toggle">
+            <label for="annually">Annually</label>
+            <span class="pricing-toggle__wrapper">
+              <input type="radio" name="pricing" id="annually" checked>
+              <input type="radio" name="pricing" id="monthly">
+
+              <span class="pricing-toggle__background" aria-hidden="true"></span>
+              <span class="pricing-toggle__switcher" aria-hidden="true"></span>
+            </span>
+            <label for="monthly">Monthly</label>
+          </div>
         </fieldset>
       </div>
 

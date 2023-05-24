@@ -1,7 +1,6 @@
 @use '../abstracts/' as *;
 
 .component {
-  
   &__header {
     text-align: center;
   }
@@ -12,5 +11,9 @@
 
   &__controls {
     border: none;
+  }
+
+  &__content {
+    margin-top: rem(80);
   }
 }

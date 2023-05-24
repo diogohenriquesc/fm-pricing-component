@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .pricing-toggle {
   display: flex;
@@ -34,6 +34,11 @@
     height: rem(32);
     border-radius: rem(16);
     background-image: linear-gradient(135deg, $clr-accent 0%, $clr-accent-light 100%);
+    transition: all 250ms ease-out;
+
+    &:hover {
+      background-image: linear-gradient(135deg, rgba($clr-accent, 0.5) 0%, rgba($clr-accent-light, 0.5) 100%);
+    }
   }
 
   &__switcher {
@@ -53,5 +58,4 @@
     right: rem(4);
     left: 50%;
   }
-
 }

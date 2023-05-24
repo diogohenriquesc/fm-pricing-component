@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+.plan {
+  padding: rem(31) rem(29);
+  text-align: center;
+  border-radius: rem(10);
+  box-shadow: 0 rem(20) rem(40) 0 $clr-neutral-3;
+  background-color: $clr-neutral-1;
+  width: calc(100% - rem(48));
+  max-width: rem(350);
+  margin-inline: auto;
+
+  &--hightlight {
+  }
+
+  &__title {
+    margin-bottom: rem(24);
+  }
+
+  &__price {
+    font-size: rem(72);
+    line-height: get-line-height(rem(72), rem(71));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    margin-bottom: rem(32);
+
+    span {
+      font-size: rem(40);
+      line-height: get-line-height(rem(40), rem(48.76));
+    }
+  }
+
+  &__features {
+    list-style: none;
+  }
+
+  &__feature {
+    border-top: 1px solid rgba($clr-solid-2, 0.25);
+    padding-block: rem(12);
+
+    &:last-child {
+      border-bottom: 1px solid rgba($clr-solid-2, 0.25);
+    }
+  }
+
+  &__button {
+    border: none;
+    border-radius: rem(6);
+    background: linear-gradient(135deg, $clr-accent-light 0%, $clr-accent 100%);
+    width: 100%;
+    margin-top: rem(32);
+    color: $clr-neutral-1;
+    text-transform: uppercase;
+    letter-spacing: rem(1.4);
+    padding: rem(14);
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+    transition: all 250ms ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+
+    &:hover {
+      border-color: $clr-solid-3;
+      color: $clr-solid-3;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: $clr-neutral-1;
+      opacity: 0;
+      transition: all 250ms ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}

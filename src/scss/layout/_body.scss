@@ -1,10 +1,16 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 body {
   background: $clr-neutral-2;
   padding-block: rem(64) rem(71);
+  background: url("/images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: top rem(-40) right rem(-195);
 
   @include breakpoint(md) {
     padding-block: rem(71) rem(103);
+    background: url("/images/bg-top.svg"), url('/images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: top 0 right 0, bottom 0 left 0;
   }
 }

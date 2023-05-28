@@ -10,7 +10,43 @@
   max-width: rem(350);
   margin-inline: auto;
 
-  &--hightlight {
+  @include breakpoint(xl) {
+    &:first-of-type {
+      border-radius: rem(10) 0 0 rem(10);
+    }
+
+    &:last-of-type {
+      border-radius: 0 rem(10) rem(10) 0;
+    }
+  }
+
+  &--highlight {
+    background: linear-gradient(135deg, $clr-accent-light 0.06%, $clr-accent 100.06%);
+    color: $clr-neutral-1;
+
+    @include breakpoint(xl) {
+      padding: rem(54.5) rem(31);
+    }
+
+    .plan__feature,
+    .plan__feature:last-of-type {
+      border-color: rgba($clr-neutral-1, 0.25);
+    }
+
+    .plan__button {
+      background: $clr-neutral-1;
+      color: $clr-solid-3;
+
+      &:hover {
+        border-color: $clr-neutral-1;
+        background: transparent;
+        color: $clr-neutral-1;
+      }
+
+      &:after {
+        content: none;
+      }
+    }
   }
 
   &__title {

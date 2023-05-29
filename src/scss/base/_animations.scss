@@ -1,0 +1,78 @@
+@use "../abstracts/" as *;
+
+// Plan fade in
+
+.hidden {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: none;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: all 650ms ease;
+  }
+}
+
+.plan:nth-of-type(1) {
+  transition-delay: 10ms;
+}
+
+.plan:nth-of-type(2),
+.plan:nth-of-type(3) {
+  transition-delay: 40ms;
+}
+
+@include breakpoint(xl) {
+  .plan:nth-of-type(1) {
+    transition-delay: 200ms;
+  }
+
+  .plan:nth-of-type(2) {
+    transition-delay: 400ms;
+  }
+
+  .plan:nth-of-type(3) {
+    transition-delay: 600ms;
+  }
+}
+
+// SVG's line drawing
+@media (prefers-reduced-motion: no-preference) {
+  #svg-top,
+  #svg-bottom {
+    #line3,
+    #line2,
+    #line1 {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: dash 3s linear forwards;
+    }
+
+    #line3 {
+      animation-delay: 50ms;
+    }
+
+    #line2 {
+      animation-delay: 200ms;
+    }
+
+    #line1 {
+      animation-delay: 400ms;
+    }
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dasharray: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

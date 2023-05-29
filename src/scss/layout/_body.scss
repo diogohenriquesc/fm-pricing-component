@@ -3,14 +3,33 @@
 body {
   background: $clr-neutral-2;
   padding-block: rem(64) rem(71);
-  background: url("/images/bg-top.svg");
-  background-repeat: no-repeat;
-  background-position: top rem(-40) right rem(-195);
+
+  #svg-top,
+  #svg-bottom {
+    position: absolute;
+  }
+
+  #svg-top {
+    top: -38px;
+    right: -190px;
+  }
+
+  #svg-bottom {
+    display: none;
+  }
 
   @include breakpoint(md) {
     padding-block: rem(71) rem(103);
-    background: url("/images/bg-top.svg"), url('/images/bg-bottom.svg');
-    background-repeat: no-repeat;
-    background-position: top 0 right 0, bottom 0 left 0;
+
+    #svg-top {
+      top: 0;
+      right: 0;
+    }
+
+    #svg-bottom {
+      display: block;
+      left: 0;
+      bottom: 0;
+    }
   }
 }

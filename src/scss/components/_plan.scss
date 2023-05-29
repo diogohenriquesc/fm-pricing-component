@@ -54,17 +54,18 @@
   }
 
   &__price {
-    font-size: rem(72);
-    line-height: get-line-height(rem(72), rem(71));
+    font-size: rem(40);
+    line-height: get-line-height(rem(40), rem(48.76));
     display: flex;
     align-items: center;
     justify-content: center;
     gap: rem(8);
     margin-bottom: rem(32);
+    transition: all 250ms ease-in-out;
 
     span {
-      font-size: rem(40);
-      line-height: get-line-height(rem(40), rem(48.76));
+      font-size: rem(72);
+      line-height: get-line-height(rem(72), rem(71));
     }
   }
 

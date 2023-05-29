@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .component {
   &__header {
@@ -20,6 +20,7 @@
     gap: rem(32.5);
 
     @include breakpoint(xl) {
+      margin-top: rem(64);
       flex-direction: row;
       align-items: center;
       justify-content: center;

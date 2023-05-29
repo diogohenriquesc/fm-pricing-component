@@ -19,7 +19,7 @@ body {
   }
 
   @include breakpoint(md) {
-    padding-block: rem(71) rem(103);
+    padding-block: rem(71);
 
     #svg-top {
       top: 0;
